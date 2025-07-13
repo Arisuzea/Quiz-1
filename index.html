@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Histology Practice Quiz</title>
+  <title>Quiz 1 - True or False - For Wifey</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -78,7 +78,7 @@
   </style>
 </head>
 <body>
-  <h1>Histology Practice Quiz</h1>
+  <h1>Goodluck, Loveya!</h1>
   <form id="quizForm">
     <div id="questionsContainer"></div>
     <button type="submit">Submit Answers</button>
@@ -87,163 +87,93 @@
 
   <script>
     const questions = [
-    // Muscular Tissues (1-15)
-    { q: "1. The cytoplasm of a muscle cell is specifically called the:", options: ["Cytosol", "Endoplasm", "Sarcoplasm", "Myoplasm"], answer: 2 },
-    { q: "2. The cell membrane of a muscle cell is known as the:", options: ["Sarcolemma", "Plasmalemma", "Myolemma", "Ectoplasm"], answer: 0 },
-    { q: "3. What is the specialized smooth endoplasmic reticulum found in muscle cells?", options: ["Myofibril", "Sarcoplasmic reticulum", "Sarcosome", "T-tubule"], answer: 1 },
-    { q: "4. Mitochondria within muscle cells are specifically termed:", options: ["Myosomes", "Sarcosomes", "Kinetoplasts", "Glycosomes"], answer: 1 },
-    { q: "5. The principal contractile unit of skeletal muscle, located between two successive Z discs, is the:", options: ["Myofilament", "Sarcostyle", "Myofibril", "Sarcomere"], answer: 3 },
-    { q: "6. The two principal myofilaments responsible for muscle contraction are:", options: ["Actin and Myosin", "Troponin and Tropomyosin", "Collagen and Elastin", "Keratin and Fibrin"], answer: 0 },
-    { q: "7. The connective tissue sheath that surrounds an entire skeletal muscle is the:", options: ["Endomysium", "Perimysium", "Epimysium", "Fascia"], answer: 2 },
-    { q: "8. A bundle or fasciculus of muscle fibers is enclosed by which connective tissue layer?", options: ["Endomysium", "Perimysium", "Epimysium", "Basal lamina"], answer: 1 },
-    { q: "9. The delicate connective tissue layer of reticular fibers surrounding a single muscle fiber is the:", options: ["Endomysium", "Perimysium", "Epimysium", "External lamina"], answer: 0 },
-    { q: "10. Which muscle tissue is characterized by fusiform-shaped cells and is non-striated?", options: ["Skeletal muscle", "Cardiac muscle", "Smooth muscle", "Visceral muscle"], answer: 2 },
-    { q: "11. Smooth muscle is typically found in the walls of:", options: ["The heart", "Bones", "Hollow viscera and blood vessels", "The brain"], answer: 2 },
-    { q: "12. Which muscle type is characterized by being involuntary, striated, and having branched cells?", options: ["Skeletal", "Cardiac", "Smooth", "Somatic"], answer: 1 },
-    { q: "13. Cardiac muscle cells are joined end-to-end by highly specialized junctions known as:", options: ["Gap junctions", "Desmosomes", "Tight junctions", "Intercalated discs"], answer: 3 },
-    { q: "14. What is the primary source of calcium ions for cardiac muscle contraction?", options: ["The sarcoplasmic reticulum", "The extracellular fluid", "The mitochondria", "The T-tubules"], answer: 1 },
-    { q: "15. Based on the arrangement of myofilaments, both cardiac and skeletal muscle are classified as:", options: ["Striated muscle", "Nonstriated muscle", "Involuntary muscle", "Visceral muscle"], answer: 0 },
-
-    // Bone & Bone Tissue (16-30)
-    { q: "16. The inorganic component of the bone matrix, which provides hardness, is primarily made of:", options: ["Type I collagen", "Proteoglycans", "Hydroxyapatite crystals", "Osteocalcin"], answer: 2 },
-    { q: "17. The organic framework of bone, providing strength and flexibility, is made up mainly of:", options: ["Hydroxyapatite crystals", "Calcium and phosphate", "Type I collagen fibers", "Elastin fibers"], answer: 2 },
-    { q: "18. The structural units of compact bone, consisting of concentric lamellae around a central canal, are called:", options: ["Trabeculae", "Spicules", "Osteons (Haversian systems)", "Lacunae"], answer: 2 },
-    { q: "19. Spongy or cancellous bone is characterized by a network of:", options: ["Osteons", "Volkmann's canals", "Trabeculae and spicules", "A solid bone mass"], answer: 2 },
-    { q: "20. The specialized connective tissue surrounding the periphery of bone is termed the:", options: ["Endosteum", "Periosteum", "Articular cartilage", "Marrow"], answer: 1 },
-    { q: "21. Vascular channels that connect adjacent Haversian canals within compact bone are called:", options: ["Canaliculi", "Lacunae", "Volkmann's canals", "Lamellae"], answer: 2 },
-    { q: "22. Bone serves as a critical storage depot for 99% of the body's:", options: ["Sodium", "Iron", "Potassium", "Calcium"], answer: 3 },
-    { q: "23. Which mature bone cells are embedded in lacunae and maintain the mineralized matrix?", options: ["Osteoblasts", "Osteocytes", "Osteoclasts", "Osteoprogenitor cells"], answer: 1 },
-    { q: "24. Which bone cells are responsible for synthesizing and secreting the organic components of the bone matrix?", options: ["Osteocytes", "Osteoclasts", "Osteoprogenitor cells", "Osteoblasts"], answer: 3 },
-    { q: "25. Which bone cells are large, multinucleated, and responsible for bone resorption?", options: ["Osteoblasts", "Osteocytes", "Osteoclasts", "Mesenchymal cells"], answer: 2 },
-    { q: "26. Osteoclasts are typically found residing within shallow cavities on the bone surface known as:", options: ["Lacunae", "Canaliculi", "Howship's lacunae", "Central canals"], answer: 2 },
-    { q: "27. The process of forming bone from a hyaline cartilage model, typical for long bones, is called:", options: ["Intramembranous ossification", "Endochondral ossification", "Cartilaginous growth", "Bone remodeling"], answer: 1 },
-    { q: "28. In developing long bones, the site important for longitudinal growth is the:", options: ["Diaphysis", "Periosteum", "Epiphyseal plate", "Marrow cavity"], answer: 2 },
-    { q: "29. Which zone of the epiphyseal plate features chondrocytes actively undergoing mitosis?", options: ["Resting Zone", "Zone of Proliferation", "Zone of Hypertrophy", "Osteogenic Zone"], answer: 1 },
-    { q: "30. In the final stage at the epiphyseal plate, calcified cartilage is replaced by bone in the:", options: ["Zone of Proliferation", "Resting Zone", "Zone of Hypertrophy", "Osteogenic (Ossification) Zone"], answer: 3 },
-    
-    // Blood & Formed Elements (31-50)
-    { q: "31. What is the term for the liquid intercellular material of blood?", options: ["Cytosol", "Plasma", "Serum", "Lymph"], answer: 1 },
-    { q: "32. In a centrifuged blood sample, the thin layer containing leukocytes and platelets is the:", options: ["Hematocrit", "Formed elements", "Buffy coat", "Plasma layer"], answer: 2 },
-    { q: "33. Which formed elements are non-nucleated cell fragments derived from megakaryocytes?", options: ["Erythrocytes", "Leukocytes", "Platelets", "Monocytes"], answer: 2 },
-    { q: "34. Which formed elements are considered the 'true cells' of the blood because they possess a nucleus?", options: ["Erythrocytes", "Platelets", "Thrombocytes", "Leukocytes"], answer: 3 },
-    { q: "35. What is the primary function of erythrocytes (RBCs)?", options: ["Fighting infection", "Blood clotting", "Transporting oxygen", "Producing antibodies"], answer: 2 },
-    { q: "36. What is the approximate diameter of a circulating mature erythrocyte?", options: ["2 to 4 µm", "6 to 8 µm", "10 to 12 µm", "15 to 20 µm"], answer: 1 },
-    { q: "37. Which leukocyte is typically the most numerous and has a multi-lobed (3-5 lobes) nucleus?", options: ["Neutrophil", "Eosinophil", "Basophil", "Monocyte"], answer: 0 },
-    { q: "38. Which leukocyte transforms into a tissue macrophage and has a large, often horseshoe-shaped nucleus?", options: ["Lymphocyte", "Eosinophil", "Basophil", "Monocyte"], answer: 3 },
-    { q: "39. A leukocyte with a bilobed nucleus and large, red-orange granules is the:", options: ["Neutrophil", "Basophil", "Monocyte", "Eosinophil"], answer: 3 },
-    { q: "40. Which leukocyte has a nucleus often obscured by large, dark blue-staining granules that release histamine?", options: ["Lymphocyte", "Eosinophil", "Basophil", "Neutrophil"], answer: 2 },
-    { q: "41. The eosinophil's granules help to:", options: ["Initiate blood clotting", "Promote inflammation", "Diminish the effects of allergic reactions", "Stimulate muscle contraction"], answer: 2 },
-    { q: "42. Which cells are the main functional cells of the lymphatic system?", options: ["Monocytes", "Neutrophils", "Erythrocytes", "Lymphocytes"], answer: 3 },
-    { q: "43. What is the primary function of B lymphocytes?", options: ["Phagocytosis of bacteria", "Production of antibodies/immunoglobulins", "Cell-mediated immunity", "Antigen presentation"], answer: 1 },
-    { q: "44. T lymphocytes are primarily involved in what type of immune response?", options: ["Humoral immunity", "Allergic reactions", "Cell-mediated immunity", "Blood clotting"], answer: 2 },
-    { q: "45. During inflammation, which leukocyte leaves the blood vessel to become a macrophage?", options: ["Eosinophil", "Basophil", "Monocyte", "Lymphocyte"], answer: 2 },
-    { q: "46. The general term for leukocytes with few and inconspicuous granules is:", options: ["Granulocytes", "Polymorphonuclear", "Agranulocytes", "Thrombocytes"], answer: 2 },
-    { q: "47. The development, growth, and maturation of bones is referred to as:", options: ["Ossification", "Calcification", "Osteogenesis", "Remodeling"], answer: 2 },
-    { q: "48. The primary ossification center, a site of increasing bone diameter, is located in the:", options: ["Epiphysis", "Diaphysis", "Metaphysis", "Articular cartilage"], answer: 1 },
-    { q: "49. Which zone of the epiphyseal plate is also known as the 'Resting Zone'?", options: ["Zone of Proliferation", "Zone of Maturation", "Zone of Reserve Cartilage", "Osteogenic Zone"], answer: 2 },
-    { q: "50. In which zone of the epiphyseal plate do chondrocytes enlarge and compress the matrix?", options: ["Zone of Proliferation", "Osteogenic Zone", "Zone of Maturation and Hypertrophy", "Zone of Reserve Cartilage"], answer: 2 },
-    
-    // Nervous System Divisions & Neuron Basics (51-70)
-    { q: "51. The nervous system is anatomically divided into the:", options: ["Somatic and Autonomic Systems", "Central and Peripheral Nervous Systems", "Sensory and Motor Systems", "Brain and Spinal Cord"], answer: 1 },
-    { q: "52. The Central Nervous System (CNS) consists of the:", options: ["Nerves and ganglia", "Brain and spinal cord", "Cranial and spinal nerves", "Sensory receptors and effectors"], answer: 1 },
-    { q: "53. The Peripheral Nervous System (PNS) consists of:", options: ["The brain and cerebellum", "The spinal cord and meninges", "Nerves, ganglia, and receptors outside the CNS", "The cerebrum only"], answer: 2 },
-    { q: "54. The two principal types of cells in nervous tissue are:", options: ["Neurons and Astrocytes", "Neurons and Neuroglia", "Schwann cells and Oligodendrocytes", "Ependymal cells and Microglia"], answer: 1 },
-    { q: "55. The trophic center of a neuron, containing the nucleus and organelles, is the:", options: ["Axon", "Dendrite", "Cell body (Soma)", "Terminal bouton"], answer: 2 },
-    { q: "56. The highly developed rough endoplasmic reticulum in a neuron's cell body is termed:", options: ["Golgi apparatus", "Sarcoplasmic reticulum", "Nissl bodies", "Neurofilaments"], answer: 2 },
-    { q: "57. The 'owl's eye' appearance of a neuron's nucleus is due to its large size and prominent:", options: ["Nucleolus", "Nuclear pore", "Chromatin", "Envelope"], answer: 0 },
-    { q: "58. Which nerve processes are typically short, tapering, and highly branched to receive signals?", options: ["Axons", "Collaterals", "Dendrites", "Telodendria"], answer: 2 },
-    { q: "59. The single, long projection that transmits impulses away from the neuron cell body is the:", options: ["Dendrite", "Axon", "Soma", "Nissl body"], answer: 1 },
-    { q: "60. The cone-shaped elevation where the axon originates from the cell body is the:", options: ["Terminal bouton", "Dendritic spine", "Axon hillock", "Node of Ranvier"], answer: 2 },
-    { q: "61. Functionally, nerve fibers that carry sensory inputs towards the CNS are known as:", options: ["Efferent", "Motor", "Afferent", "Descending"], answer: 2 },
-    { q: "62. Motor nerve fibers that carry impulses from the CNS to effector organs are known as:", options: ["Afferent", "Sensory", "Ascending", "Efferent"], answer: 3 },
-    { q: "63. The voluntary division of the motor nervous system that controls skeletal muscles is the:", options: ["Autonomic Nervous System", "Somatic Nervous System", "Sympathetic Division", "Parasympathetic Division"], answer: 1 },
-    { q: "64. The involuntary division of the nervous system is the:", options: ["Somatic Nervous System", "Central Nervous System", "Autonomic Nervous System", "Motor System"], answer: 2 },
-    { q: "65. The division of the ANS that prepares the body for 'fight or flight' is the:", options: ["Somatic division", "Parasympathetic division", "Sensory division", "Sympathetic division"], answer: 3 },
-    { q: "66. The division of the ANS that prepares the body for 'rest and digest' is the:", options: ["Sympathetic division", "Somatic division", "Parasympathetic division", "Central division"], answer: 2 },
-    { q: "67. A neuron with one axon and two or more dendrites is structurally classified as:", options: ["Unipolar", "Bipolar", "Multipolar", "Pseudounipolar"], answer: 2 },
-    { q: "68. A neuron with one axon and one dendrite is structurally classified as:", options: ["Unipolar", "Bipolar", "Multipolar", "Anaxonic"], answer: 1 },
-    { q: "69. Specialized sites of contact between neurons for information transmission are called:", options: ["Junctions", "Desmosomes", "Synapses", "Connections"], answer: 2 },
-    { q: "70. The contact point between a neuron and a muscle fiber is a:", options: ["Neuroglandular junction", "Synaptic cleft", "Neuromuscular junction", "Axosomatic synapse"], answer: 2 },
-
-    // Neuroglia (71-80)
-    { q: "71. Which glial cells are the most abundant and largest, providing support in the CNS?", options: ["Oligodendrocytes", "Astrocytes", "Microglia", "Schwann cells"], answer: 1 },
-    { q: "72. Which glial cells are responsible for producing the myelin sheath around axons within the CNS?", options: ["Astrocytes", "Schwann cells", "Oligodendrocytes", "Satellite cells"], answer: 2 },
-    { q: "73. Myelination in the Peripheral Nervous System (PNS) is accomplished by:", options: ["Oligodendrocytes", "Astrocytes", "Microglia", "Schwann cells"], answer: 3 },
-    { q: "74. Which glial cells act as the phagocytes of the CNS and are derived from monocytes?", options: ["Astrocytes", "Ependymal cells", "Microglia", "Oligodendrocytes"], answer: 2 },
-    { q: "75. The cuboidal cells that line the ventricles of the brain and help move CSF are:", options: ["Astrocytes", "Ependymal cells", "Microglia", "Satellite cells"], answer: 1 },
-    { q: "76. Which glial cells provide structural support to neuron cell bodies within ganglia of the PNS?", options: ["Schwann cells", "Astrocytes", "Oligodendrocytes", "Satellite cells"], answer: 3 },
-    { q: "77. The main function of the apical cilia on ependymal cells is to:", options: ["Produce myelin", "Move cerebrospinal fluid", "Phagocytize debris", "Transmit nerve impulses"], answer: 1 },
-    { q: "78. In terms of number, neuroglia are generally how much more numerous than neurons?", options: ["2 times", "Equal in number", "5-50 times", "100 times"], answer: 2 },
-    { q: "79. Unlike neurons, neuroglial cells do not:", options: ["Have a nucleus", "React to or propagate nerve impulses", "Need nutrients", "Exist in the CNS"], answer: 1 },
-    { q: "80. A primary function of astrocytes is to terminate at:", options: ["Other neurons only", "Blood vessels or neurons", "The skull", "The sarcoplasmic reticulum"], answer: 1 },
-
-    // CNS & PNS Histology (81-100)
-    { q: "81. In the brain and cerebellum, gray matter is located primarily in the:", options: ["Center, forming nuclei", "Periphery, forming the cortex", "Brainstem only", "Ventricles"], answer: 1 },
-    { q: "82. In the spinal cord, the H-shaped gray matter is located:", options: ["On the periphery", "Centrally, surrounded by white matter", "In the dorsal root ganglion", "Only in the cervical region"], answer: 1 },
-    { q: "83. The dorsal horn of the spinal cord's gray matter primarily contains cell bodies of:", options: ["Motor neurons", "Interneurons", "Sensory neurons", "Glial cells"], answer: 1 },
-    { q: "84. The ventral horn of the spinal cord's gray matter houses the cell bodies of:", options: ["Sensory neurons", "Interneurons", "Multipolar motor neurons", "Unipolar neurons"], answer: 2 },
-    { q: "85. The three layers of the cerebellar cortex, from superficial to deep, are:", options: ["Granular, Purkinje, Molecular", "Molecular, Purkinje, Granular", "Purkinje, Molecular, Granular", "Molecular, Granular, Purkinje"], answer: 1 },
-    { q: "86. Which layer of the cerebellar cortex is made up of large, flask-shaped Purkinje cells?", options: ["Molecular layer", "Granular layer", "Purkinje layer", "White matter"], answer: 2 },
-    { q: "87. The deepest layer of the cerebellar cortex, made up of small granule cells, is the:", options: ["Molecular layer", "Purkinje layer", "Granular layer", "Lamina propria"], answer: 2 },
-    { q: "88. White matter in the CNS appears white because it is made up mainly of:", options: ["Neuron cell bodies", "Unmyelinated fibers", "Myelinated nerve fibers", "Cerebrospinal fluid"], answer: 2 },
-    { q: "89. Gray matter is an aggregate of neuronal cell bodies, dendrites, and:", options: ["Myelinated axons", "Schwann cells", "Unmyelinated portions of axons and glial cells", "Mainly fat cells"], answer: 2 },
-    { q: "90. Aggregations of neuron cell bodies located within the PNS are known as:", options: ["Nuclei", "Tracts", "Nerves", "Ganglia"], answer: 3 },
-    { q: "91. Cell bodies of sensory neurons are housed within the:", options: ["Ventral horn", "Sensory ganglia", "Autonomic ganglia", "Cerebral cortex"], answer: 1 },
-    { q: "92. Cell bodies of postganglionic autonomic nerves are housed in the:", options: ["Sensory ganglia", "Dorsal horn", "Autonomic ganglia", "Ventral horn"], answer: 2 },
-    { q: "93. The delicate organs of the CNS are protected by bone and a three-layered connective tissue called the:", options: ["Dura mater", "Periosteum", "Meninges", "Fascia"], answer: 2 },
-    { q: "94. The brain and spinal cord have a semi-firm gel consistency and are devoid of:", options: ["Blood vessels", "Glial cells", "Intervening connective tissue elements", "Neurons"], answer: 2 },
-    { q: "95. Which type of neuron has its axon and dendrites fused at the region of the cyton?", options: ["Bipolar", "Multipolar", "Pseudounipolar", "Unipolar"], answer: 2 },
-    { q: "96. Myelinated fibers may be observed with the naked eye because they appear:", options: ["Gray", "White", "Transparent", "Pink"], answer: 1 },
-    { q: "97. In the cerebellar cortex, which cells can only be found in the Purkinje layer?", options: ["Granule cells", "Stellate cells", "Purkinje cells", "Basket cells"], answer: 2 },
-    { q: "98. Which of the following is NOT a type of neuroglia/supporting cell?", options: ["Astrocyte", "Ependymal cell", "Microglia", "Perikaryon"], answer: 3 },
-    { q: "99. A neuron with a single axon that divides close to the cell body into two long branches is classified as:", options: ["Bipolar", "Unipolar", "Multipolar", "Pseudounipolar"], answer: 1 },
-    { q: "100. The motor component of the PNS is further divided into the:", options: ["Sensory and Motor divisions", "Somatic and Autonomic nervous systems", "CNS and PNS", "Sympathetic and Parasympathetic divisions"], answer: 1 }
+    { "q": "A Hospital Information System (HIS) is an element of health informatics that focuses mainly on the administrative needs of hospitals.", "a": "True" },
+    { "q": "A Picture Archiving and Communication System (PACS) is used only for the short-term retrieval of images.", "a": "False" },
+    { "q": "A Vendor Neutral Archival (VNA) stores medical imaging data using proprietary interfaces that lock users into a single system.", "a": "False" },
+    { "q": "One advantage of an RIS is that it can integrate with a referring doctor's EHR system to provide easier patient data access.", "a": "True" },
+    { "q": "According to the text, using an RIS leads to slower insurance payments because verification happens after the patient visit.", "a": "False" },
+    { "q": "Improved efficiency is an advantage of an RIS because it reduces the need to enter patient data multiple times.", "a": "True" },
+    { "q": "The six basic functions of an RIS are Patient Management, Scheduling, Patient Tracking, Results Reporting, Image Tracking, and Billing.", "a": "True" },
+    { "q": "The Patient Management function of an RIS tracks a patient's entire workflow through the radiology department.", "a": "True" },
+    { "q": "The scheduling function of an RIS allows staff to make appointments for inpatients only.", "a": "False" },
+    { "q": "Using the Patient Tracking function in an RIS, providers can coordinate a patient's entire radiology history from admission to discharge.", "a": "True" },
+    { "q": "The Results Reporting function in an RIS can only generate statistical reports for a single patient at a time.", "a": "False" },
+    { "q": "Traditionally, radiology providers used RIS for tracking individual films and their associated digitized image data.", "a": "True" },
+    { "q": "RIS systems provide financial record-keeping and process electronic payments through their billing function.", "a": "True" },
+    { "q": "Cardiology Information Systems (CIS) are mainly focused on the storage and retrieval of radiology-centric images.", "a": "False" },
+    { "q": "A CIS usually receives an order with patient demographics from other imaging management systems.", "a": "True" },
+    { "q": "Most Cardiology Information Systems include extensive post-processing functions for image manipulation.", "a": "False" },
+    { "q": "The technical specifics of cardiology information systems in the 1970s originated from a mainframe environment.", "a": "True" },
+    { "q": "Modular systems in the 1980s emphasized the use of real-time applications and mini computers for CIS.", "a": "True" },
+    { "q": "The introduction of the Internet was a turning point that shifted the focus of CIS towards creating larger, more centralized systems.", "a": "False" },
+    { "q": "A key benefit of a CIS is providing ease of access to patient data while maintaining security.", "a": "True" },
+    { "q": "A CIS consolidates multiple types of patient cardiology information, eliminating the need for doctors to request results from different departments.", "a": "True" },
+    { "q": "Flexibility in the workflow is a feature of CIS that allows physicians and nurses to assess patient data from a single platform.", "a": "True" },
+    { "q": "The 'Enhanced Comparability' of a CIS makes it more difficult for healthcare professionals to retrieve past data for comparison.", "a": "False" },
+    { "q": "A key function of a CIS is editing, viewing, and storing multi-modal cardiology data like CT, MRI, and cardiac ultrasound.", "a": "True" },
+    { "q": "Remote access to Cardiology Information Systems is made possible by networks, the internet, and mobile devices like tablets and smartphones.", "a": "True" },
+    { "q": "One of the main benefits of CIS is the ease and consistency of reporting, allowing for virtually real-time information retrieval.", "a": "True" },
+    { "q": "A Cardiology Information System cannot be integrated with existing Electronic Health Record (EHR) Systems.", "a": "False" },
+    { "q": "Integrating a CIS with an EHR can enhance the quality of services and provide a more comprehensive view of the patient care spectrum.", "a": "True" },
+    { "q": "A Radiology Information System (RIS) is described as a networked software system for managing medical imagery and associated data.", "a": "True" },
+    { "q": "An RIS is often used in conjunction with a PACS and a VNA.", "a": "True" },
+    { "q": "According to the 'Key Points to Remember', one of the benefits of CIS is enhanced comparability.", "a": "True" },
+    { "q": "The functionalities of a CIS are limited to remote access and EHR integration only.", "a": "False" },
+    { "q": "The 'Key Points to Remember' state that RIS functions include patient tracking and billing.", "a": "True" },
+    { "q": "A Hospital Information System (HIS) is a healthcare technology used for short-term and long-term storage of images.", "a": "False" },
+    { "q": "A VNA makes medical imaging data accessible through different picture archiving and communication systems (PACS).", "a": "True" },
+    { "q": "The evolution of CIS began with modular systems in the 1970s and mainframe environments in the 1980s.", "a": "False" },
+    { "q": "An RIS allows staff to add images and reports to EHRs, where they can be retrieved and viewed by authorized staff.", "a": "True" },
+    { "q": "The billing functions of an RIS are becoming increasingly incorporated into medical organizations' overall EHR systems.", "a": "True" },
+    { "q": "The information used by cardiologists in a CIS is limited to images like angiograms and CT scans.", "a": "False" },
+    { "q": "Some modern CIS have attempted to integrate with a radiology information system to create a cardiovascular information system.", "a": "True" }
     ];
 
     const container = document.getElementById("questionsContainer");
-    questions.forEach((question, index) => {
-      const div = document.createElement("div");
-      div.className = "question";
-      div.innerHTML = `<p>${question.q.replace(/\n/g, '<br>')}</p>` +
-        question.options.map((opt, i) =>
-          `<label><input type="radio" name="q${index}" value="${i}"> ${opt}</label><br>`
-        ).join("");
-      container.appendChild(div);
-    });
 
-    document.getElementById("quizForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      let score = 0;
-      const form = e.target;
-      const resultDiv = document.getElementById("scoreDisplay");
-      const questionsDivs = document.querySelectorAll(".question");
+        questions.forEach((question, index) => {
+          const div = document.createElement("div");
+          div.className = "question";
+          div.innerHTML = `
+            <p>${question.q}</p>
+            <label><input type="radio" name="q${index}" value="True"> True</label>
+            <label><input type="radio" name="q${index}" value="False"> False</label>
+          `;
+          container.appendChild(div);
+        });
 
-      questionsDivs.forEach(div => {
-        div.classList.remove("correct", "incorrect");
-        const oldResult = div.querySelector(".result");
-        if (oldResult) oldResult.remove();
-      });
+        document.getElementById("quizForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+          let score = 0;
+          const form = e.target;
+          const resultDiv = document.getElementById("scoreDisplay");
+          const questionsDivs = document.querySelectorAll(".question");
 
-      questions.forEach((q, idx) => {
-        const selected = form[`q${idx}`]?.value;
-        const div = questionsDivs[idx];
-        if (selected !== undefined && parseInt(selected) === q.answer) {
-          div.classList.add("correct");
-          score++;
-        } else {
-          div.classList.add("incorrect");
-          const correctText = q.options[q.answer];
-          const answerDisplay = document.createElement("p");
-          answerDisplay.className = "result";
-          answerDisplay.innerHTML = `Correct Answer: <strong>${correctText}</strong>`;
-          div.appendChild(answerDisplay);
-        }
-      });
+          questionsDivs.forEach(div => {
+            div.classList.remove("correct", "incorrect");
+            const oldResult = div.querySelector(".result");
+            if (oldResult) oldResult.remove();
+          });
 
-      resultDiv.innerHTML = `Your Score: ${score} / ${questions.length}`;
-      form.querySelector("button").disabled = true;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+          questions.forEach((q, idx) => {
+            const selected = form[`q${idx}`]?.value;
+            const div = questionsDivs[idx];
+            if (selected === q.a) {
+              div.classList.add("correct");
+              score++;
+            } else {
+              div.classList.add("incorrect");
+              const answerDisplay = document.createElement("p");
+              answerDisplay.className = "result";
+              answerDisplay.innerHTML = `Correct Answer: <strong>${q.a}</strong>`;
+              div.appendChild(answerDisplay);
+            }
+          });
+
+          resultDiv.innerHTML = `Your Score: ${score} / ${questions.length}`;
+          form.querySelector("button").disabled = true;
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
   </script>
 </body>
 </html>
